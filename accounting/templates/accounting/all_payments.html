@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'partials/_alerts.html' %}
+
+<div class="card">
+    <div class="card-header">
+        <h2>Payment Form: {{ student.name }}</h2>
+    </div>
+    <div class="card-body">
+        <form action="" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-lg-12 col-md-6 col-sm-12">
+                <label for="name"><b>Name</b></label>
+                {{ payment_form.name }}
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12">
+                <label for="class_type"><b>Class Type</b></label>
+                {{ payment_form.class_type }}
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12">
+                <label for="month"><b>Month</b></label>
+                {{ payment_form.month }}
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12">
+                <label for="session"><b>Session</b></label>
+                {{ payment_form.session }}
+            </div>
+            <div class="col-lg-12 col-md-6 col-sm-12">
+                <label for="status"><b>Status</b></label>
+                {{ payment_form.status }}
+            </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

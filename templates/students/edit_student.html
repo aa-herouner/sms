@@ -1,0 +1,104 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'partials/_alerts.html' %}
+
+<div class="card">
+    <div class="card-header">
+        <h2>Edit Student Information</h2>
+    </div>
+    <div class="card-body">
+        <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="academic_year"><b>Academic Year</b></label>
+                {{ edit_forms.academic_year }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="admission_date"><b>Admission Date</b></label>
+                {{ edit_forms.admission_date }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="admission_id"><b>Admission ID</b></label>
+                {{ edit_forms.admission_id }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="name"><b>Name</b></label>
+                {{ edit_forms.name }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="age"><b>Age</b></label>
+                {{ edit_forms.age }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="gender"><b>Gender</b></label>
+                {{ edit_forms.gender }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="student_img"><b> Student Image</b></label>
+                {{ edit_forms.student_img }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="class_type"><b>Class Type</b></label>
+                {{ edit_forms.class_type }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="section_type"><b>Section Type</b></label>
+                {{ edit_forms.section_type }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="shift_type"><b>Shift Type</b></label>
+                {{ edit_forms.shift_type }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="fathers_name"><b>Fathers Name</b></label>
+                {{ edit_forms.fathers_name }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="fathers_nid"><b>Fathers ID</b></label>
+                {{ edit_forms.fathers_nid }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="fathers_number"><b>Fathers Number</b></label>
+                {{ edit_forms.fathers_number }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="mothers_name"><b>Mothers Name</b></label>
+                {{ edit_forms.mothers_name }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="mothers_nid"><b>Mothers ID</b></label>
+                {{ edit_forms.mothers_nid }}
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <label for="mothers_number"><b>Mothers Number</b></label>
+                {{ edit_forms.mothers_number }}
+            </div>
+        </div><br>
+        <button type="submit" class="btn btn-outline-primary">Save</button>
+        </form>
+    </div>
+</div>
+<style>
+    h2{
+        text-align: center;
+        color: white;
+    }
+    .card-header{
+        background-color: #63c2de;
+        border-radius: 10px 10px 0 0;
+    }
+    .card{
+        border-radius: 20px;
+    }
+    .btn{
+        border-radius: 5px;
+    }
+</style>
+    
+{% endblock %}
+

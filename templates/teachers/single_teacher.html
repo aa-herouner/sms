@@ -1,0 +1,97 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                 <i class="fa fa-align-justify icon"></i> <h3>Teacher Information</h3>
+            </div>
+            <div class="card-body">
+                <div class="image">
+                    <img src="{{ single_teacher.teacher_img.url }}" class="img-fluid" />
+                </div>
+                <table class=" table  table-bordered table-striped ">
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td>{{ single_teacher.name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td>{{ single_teacher.email }}</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>{{ single_teacher.age }}</td>
+                        </tr>
+                        <tr>
+                            <th>Gender</th>
+                            <td>{{ single_teacher.gender }}</td>
+                        </tr>
+                        <tr>
+                            <th>Joining Date</th>
+                            <td>{{ single_teacher.joining_date }}</td>
+                        </tr>
+                        <tr>
+                            <th>Passing Year</th>
+                            <td>{{ single_teacher.passing_year }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                 <i class="fa fa-align-justify icon"></i> <h3>Teachers Personal Information</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Department</th>
+                            <td>{{ single_teacher.dept_type }}</td>
+                        </tr>
+                        <tr>
+                            <th>Sub Section</th>
+                            <td>{{ single_teacher.sub_type }}</td>
+                        </tr>
+                        <tr>
+                            <th>Salary</th>
+                            <td>{{ single_teacher.salary }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    h3{
+        color: #fff;
+    }
+    .icon{
+        color: #fff;
+    }
+    img{
+        width: 15rem;
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+        margin: 1rem;    
+    }
+    .card-header{
+        background-color: #63c2de;
+        border-radius: 10px 10px 0 0;
+    }
+    .card{
+        border-radius: 20px;
+}
+</style>
+{% endblock %}
+

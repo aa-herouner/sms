@@ -1,0 +1,126 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card academic">
+            <div class="card-header">
+                 <i class="fa fa-align-justify icon"></i> <h3>Students Academic Information</h3>
+            </div>
+            <div class="card-body">
+                <div class="image">
+                    <img src="{{single_student.student_img.url}}" class="img-fluid"/>
+                </div>
+                <table class="table  table-bordered table-striped ">
+                    <tbody>
+                        <tr>
+                            <th>Student Name</th>
+                            <td>{{ single_student.name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Academic Year</th>
+                            <td>{{ single_student.academic_year }}</td>
+                        </tr>
+                        <tr>
+                            <th>Admission Date</th>
+                            <td>{{ single_student.admission_date }}</td>
+                        </tr>
+                        <tr>
+                            <th>Admission ID</th>
+                            <td> {{ single_student.admission_id }}</td>
+                        </tr>
+                        <tr>
+                            <th>Class</th>
+                            <td>{{ single_student.class_type }}</td>
+                        </tr>
+                        <tr>
+                            <th>Section</th>
+                            <td>{{ single_student.section_type }}</td>
+                        </tr>
+                        <tr>
+                            <th>Shift</th>
+                            <td>{{ single_student.shift_type }}</td>
+                        </tr>
+                    </tbody>
+                </table>  
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header">
+                 <i class="fa fa-align-justify icon"></i> <h3>Fathers Information</h3>
+            </div>
+            <div class="card-body">
+                <table class="table  table-bordered table-striped ">
+                    <tbody>
+                        <tr>
+                            <th>Fathers Name</th>
+                            <td> {{ single_student.fathers_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Fathers ID</th>
+                            <td>{{ single_student.fathers_nid }}</td>
+                        </tr>
+                        <tr>
+                            <th>Contact Number</th>
+                            <td>{{ single_student.fathers_number }}</td>
+                        </tr>
+                        <tr>
+                    </tbody>
+                </table>  
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                 <i class="fa fa-align-justify icon"></i> <h3>Mothers Information</h3>
+            </div>
+            <div class="card-body">
+                <table class="table  table-bordered table-striped ">
+                    <tbody>
+                        <tr>
+                            <th>Mothers Name</th>
+                            <td> {{ single_student.mothers_name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Mothers ID</th>
+                            <td>{{ single_student.mothers_nid }}</td>
+                        </tr>
+                        <tr>
+                            <th>Contact Number</th>
+                            <td>{{ single_student.mothers_number }}</td>
+                        </tr>
+                        <tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    h3{
+        color: #fff;
+    }
+    .icon{
+        color: #fff;
+    }
+    img{
+        width: 15rem;
+    }
+    .image{
+       display: flex;
+       justify-content: center;
+       margin: 1rem;    
+    }
+    .card-header{
+    background-color: #63c2de;
+    border-radius: 10px 10px 0 0;
+    }
+    .card{
+        border-radius: 20px;
+    }
+</style>
+{% endblock %}
+
