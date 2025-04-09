@@ -25,7 +25,7 @@ SECRET_KEY = 'ates_d67wquk((7=+$u1qy1_tl^*ypiny@9zhnw3c$6k&b=6pq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aaherouner.pythonanywhere.com']
 
 
 # Application definition
@@ -134,7 +134,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'sms/static')
 ]
-
 
 # Media folder
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
